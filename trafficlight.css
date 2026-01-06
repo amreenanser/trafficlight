@@ -1,0 +1,53 @@
+
+  body{
+    background:#eef2f7;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial;
+  }
+
+  .traffic{
+    background:black;
+    padding:20px;
+    width:120px;
+    border-radius:20px;
+    text-align:center;
+  }
+
+  .light{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    margin:12px auto;
+    opacity:0.2; /* dim when OFF */
+  }
+
+  /* One simple animation */
+  @keyframes glow {
+    0%   { opacity:1; }   /* ON */
+    50%  { opacity:1; }
+    51%  { opacity:0.2; } /* OFF */
+    100% { opacity:0.2; }
+  }
+
+  /* Red starts instantly */
+  .red{
+    background:red;
+    animation: glow 5s infinite;
+  }
+
+  /* Yellow starts after 2 seconds */
+  .yellow{
+    background:yellow;
+    animation: glow 5s infinite;
+    animation-delay:2s;
+  }
+
+  /* Green starts after 3 seconds */
+  .green{
+    background:green;
+    animation: glow 5s infinite;
+    animation-delay:3s;
+  }
